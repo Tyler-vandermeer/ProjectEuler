@@ -46,7 +46,7 @@ namespace ProjectEuler
                 fib1 = fib2;
                 fib2 = fibTemp;
             }
-            Console.WriteLine("2 : Even Fibinacci numbers");
+            Console.WriteLine("2 : Even Fibinacci Numbers");
             Console.WriteLine(sum);
         }
         /// <summary>
@@ -75,8 +75,47 @@ namespace ProjectEuler
             {
                 largestFactor = numberTemp;
             }
-            Console.WriteLine("3 : Largest prime factor");
+            Console.WriteLine("3 : Largest Prime Factor");
             Console.WriteLine(largestFactor);
+        }
+        /// <summary>
+        /// A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
+        /// Find the largest palindrome made from the product of two 3-digit numbers.
+        /// </summary>
+        public void LargestPalindromeProduct()
+        {
+            int product = 0;
+            string productString;
+            int largestPalindrome = 0;
+            for (int i = 999; i > 0; i--)
+            {
+                for (int j = 999; j > 0; j--)
+                {
+                    product = i * j;
+                    productString = product.ToString();
+                    char[] palindromeArray = productString.ToCharArray();
+                    int counter = palindromeArray.Length - 1;
+                    bool flag = true;
+                    for (int k = 0; k < palindromeArray.Length; k++)
+                    {
+                        if(!palindromeArray[k].Equals(palindromeArray[counter]))
+                        {
+                            flag = false;
+                            break;
+                        }
+                        counter--;
+                    }
+                    if (flag)
+                    {
+                        if(product > largestPalindrome)
+                        {
+                            largestPalindrome = product;
+                        }
+                    }
+                }
+            }
+            Console.WriteLine("4 : Largest Palindrome Product");
+            Console.WriteLine(largestPalindrome);
         }
     }
 }
