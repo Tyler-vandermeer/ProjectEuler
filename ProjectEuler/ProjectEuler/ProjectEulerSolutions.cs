@@ -22,7 +22,7 @@ namespace ProjectEuler
                     sum += i;
                 }
             }
-            Console.WriteLine("Project 1 : Multiples of 3 and 5");
+            Console.WriteLine("1 : Multiples of 3 and 5");
             Console.WriteLine(sum);
         }
         /// <summary>
@@ -46,9 +46,37 @@ namespace ProjectEuler
                 fib1 = fib2;
                 fib2 = fibTemp;
             }
-            Console.WriteLine("Project 2 : Even Fibinacci numbers");
+            Console.WriteLine("2 : Even Fibinacci numbers");
             Console.WriteLine(sum);
         }
+        /// <summary>
+        /// The prime factors of 13195 are 5, 7, 13 and 29.
+        /// What is the largest prime factor of the number 600851475143 ?
+        /// </summary>
+        public void LargestPrimeFactor()
+        {
+            long number = 600851475143;
+            long numberTemp = number;
+            long largestFactor = 0;
+            int counter = 3;
+            while (counter * counter <= numberTemp)
+            {
+                if (numberTemp % counter == 0)
+                {
+                    numberTemp = numberTemp / counter;
+                    largestFactor = counter;
+                }
+                else
+                {
+                    counter+=2;
+                }
+            }
+            if (numberTemp > largestFactor)
+            {
+                largestFactor = numberTemp;
+            }
+            Console.WriteLine("3 : Largest prime factor");
+            Console.WriteLine(largestFactor);
+        }
     }
-
 }

@@ -10,11 +10,14 @@ namespace ProjectEuler
     {
         static void Main(string[] args)
         {
-            //Project Euler 1 : Multiples of 3 and 5
             ProjectEulerSolutions solution = new ProjectEulerSolutions();
+            //Project Euler 1 : Multiples of 3 and 5
             solution.MultiplesOf3And5();
             //Project Euler 2 : Even Fibinacci numbers
             solution.EvenFibinacciNumbers();
+            //Project Euler 3 : Largest prime factor
+            solution.LargestPrimeFactor();
+            //To keep the program from stopping before seeing the solution
             Console.ReadKey();
         }
     }
