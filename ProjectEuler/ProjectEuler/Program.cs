@@ -19,6 +19,8 @@ namespace ProjectEuler
             solution.LargestPrimeFactor();
             //4 : Largest Palindrome Number
             solution.LargestPalindromeProduct();
+            //5 : Smallest Multiple
+            solution.SmallestMultiple();
             //To keep the program from stopping before seeing the solution
             Console.ReadKey();
         }

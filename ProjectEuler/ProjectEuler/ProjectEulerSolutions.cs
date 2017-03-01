@@ -68,7 +68,7 @@ namespace ProjectEuler
                 }
                 else
                 {
-                    counter+=2;
+                    counter += 2;
                 }
             }
             if (numberTemp > largestFactor)
@@ -98,7 +98,7 @@ namespace ProjectEuler
                     bool flag = true;
                     for (int k = 0; k < palindromeArray.Length; k++)
                     {
-                        if(!palindromeArray[k].Equals(palindromeArray[counter]))
+                        if (!palindromeArray[k].Equals(palindromeArray[counter]))
                         {
                             flag = false;
                             break;
@@ -107,7 +107,7 @@ namespace ProjectEuler
                     }
                     if (flag)
                     {
-                        if(product > largestPalindrome)
+                        if (product > largestPalindrome)
                         {
                             largestPalindrome = product;
                         }
@@ -116,6 +116,33 @@ namespace ProjectEuler
             }
             Console.WriteLine("4 : Largest Palindrome Product");
             Console.WriteLine(largestPalindrome);
+        }
+        /// <summary>
+        /// 2520 is the smallest number that can be divided by each of the numbers from 1 to 10 without any remainder.
+        /// What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
+        /// </summary>
+        public void SmallestMultiple()
+        {
+            int number = 20;
+            while (true)
+            {
+                bool flag = true;
+                for (int i = 1; i < 21; i++)
+                {
+                    if (number % i != 0)
+                    {
+                        flag = false;
+                        break;
+                    }
+                }
+                if (flag)
+                {
+                    break;
+                }
+                number += 20;
+            }
+            Console.WriteLine("5 : Smallest Multiple");
+            Console.WriteLine(number);
         }
     }
 }
