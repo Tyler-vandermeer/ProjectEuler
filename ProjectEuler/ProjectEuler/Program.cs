@@ -21,6 +21,8 @@ namespace ProjectEuler
             solution.LargestPalindromeProduct();
             //5 : Smallest Multiple
             solution.SmallestMultiple();
+            //6 : Sum Square Difference
+            solution.SumSquareDifference();
             //To keep the program from stopping before seeing the solution
             Console.ReadKey();
         }
