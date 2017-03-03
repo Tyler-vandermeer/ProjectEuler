@@ -13,16 +13,25 @@ namespace ProjectEuler
             ProjectEulerSolutions solution = new ProjectEulerSolutions();
             //1 : Multiples of 3 and 5
             solution.MultiplesOf3And5();
+
             //2 : Even Fibinacci Numbers
             solution.EvenFibinacciNumbers();
+
             //3 : Largest Prime Factor
             solution.LargestPrimeFactor();
+
             //4 : Largest Palindrome Number
             solution.LargestPalindromeProduct();
+
             //5 : Smallest Multiple
             solution.SmallestMultiple();
+
             //6 : Sum Square Difference
             solution.SumSquareDifference();
+
+            //7 : 10001st Prime
+            solution._10001stPrime();
+
             //To keep the program from stopping before seeing the solution
             Console.ReadKey();
         }

@@ -156,7 +156,7 @@ namespace ProjectEuler
         {
             int sumOFSquares = 0;
             int squareOfSums = 0;
-            for (int i= 1; i <= 100; i++)
+            for (int i = 1; i <= 100; i++)
             {
                 sumOFSquares += i * i;
                 squareOfSums += i;
@@ -165,6 +165,40 @@ namespace ProjectEuler
             int difference = squareOfSums - sumOFSquares;
             Console.WriteLine("6 : Sum Square Difference");
             Console.WriteLine(difference);
+        }
+        /// <summary>
+        /// By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
+        /// What is the 10001st prime number?
+        /// </summary>
+        public void _10001stPrime()
+        {
+            int currentNumber = 1;
+            int primeCounter = 0;
+            int _10001stPrimeNumber;
+            while (true)
+            {
+                bool flag = true;
+                for (int i = 3; i * i <= currentNumber; i+=2)
+                {
+                    if (currentNumber % i == 0)
+                    {
+                        flag = false;
+                        break;
+                    }
+                }
+                if (flag)
+                {
+                    primeCounter++;
+                    if (primeCounter == 10001)
+                    {
+                        _10001stPrimeNumber = currentNumber;
+                        break;
+                    }
+                }
+                currentNumber += 2;
+            }
+            Console.WriteLine("7 : 10001st Prime");
+            Console.WriteLine(_10001stPrimeNumber);
         }
     }
 }
