@@ -178,7 +178,7 @@ namespace ProjectEuler
             while (true)
             {
                 bool flag = true;
-                for (int i = 3; i * i <= currentNumber; i+=2)
+                for (int i = 3; i * i <= currentNumber; i += 2)
                 {
                     if (currentNumber % i == 0)
                     {
@@ -247,22 +247,27 @@ namespace ProjectEuler
                             "05886116467109405077541002256983155200055935729725" +
                             "71636269561882670428252483600823257530420752963450";
             char[] seriesChar = series.ToCharArray();
-            int[] seriesInt = seriesChar.Select(c => Convert.ToInt32(c.ToString())).ToArray();
-            int largestProd = 0;
-            for (int i = 0; i < seriesInt.Length - 13; i++)
+            int[] seriesInt =  new int[1000];
+            for (int i = 0; i < seriesChar.Length; i++)
             {
-                int prod = 0;
-                for (int j = 0; j < 13; j++)
+                seriesInt[i] = (int)seriesChar[i];
+            }
+            int product = 0;
+            int largestProduct = 0;
+            for (int i = 0; i < seriesInt.Length - 14; i++)
+            {
+                product = 0;
+                for (int j = i; j < i + 14; j++)
                 {
-                    prod *=  seriesInt[i + j];
+                    product = product * seriesInt[j];
                 }
-                if(prod > largestProd)
+                if (product > largestProduct)
                 {
-                    largestProd = prod;
+                    largestProduct = product;
                 }
             }
             Console.WriteLine("8 : Largest Product In A Series");
-            Console.WriteLine(largestProd);
+            Console.WriteLine(largestProduct);
         }
     }
 }

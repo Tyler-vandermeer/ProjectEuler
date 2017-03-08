@@ -32,7 +32,7 @@ namespace ProjectEuler
             //7 : 10001st Prime
             solution._10001stPrime();
 
-            //8: Largest Product In A Series
+            //8 : Largest Product In A Series
             solution.LargestProductInASeries();
 
             //To keep the program from stopping before seeing the solution
