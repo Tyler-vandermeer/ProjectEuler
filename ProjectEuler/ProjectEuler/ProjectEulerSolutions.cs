@@ -248,15 +248,15 @@ namespace ProjectEuler
                             "71636269561882670428252483600823257530420752963450";
             char[] seriesChar = series.ToCharArray();
             int[] seriesInt = seriesChar.Select(c => Convert.ToInt32(c.ToString())).ToArray();
-            int largestProd = 0;
+            long largestProd = 0;
             for (int i = 0; i < seriesInt.Length - 13; i++)
             {
-                int prod = 0;
-                for (int j = 0; j < 13; j++)
+                long prod = 1;
+                for (int j = i; j < i + 13; j++)
                 {
-                    prod *=  seriesInt[i + j];
+                    prod *=  seriesInt[j];
                 }
-                if(prod > largestProd)
+                if(prod >= largestProd)
                 {
                     largestProd = prod;
                 }
