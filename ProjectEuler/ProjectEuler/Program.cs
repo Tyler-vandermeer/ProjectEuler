@@ -35,6 +35,9 @@ namespace ProjectEuler
             //8 : Largest Product In A Series
             solution.LargestProductInASeries();
 
+            //9 : Special Pythagorean Triplet
+            solution.SpecialPythagoreanTriplet();
+
             //To keep the program from stopping before seeing the solution
             Console.ReadKey();
         }
