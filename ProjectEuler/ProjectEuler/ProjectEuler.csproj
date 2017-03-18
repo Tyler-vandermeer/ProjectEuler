@@ -44,7 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
-    <Compile Include="ProjectEulerSolutions.cs" />
+    <Compile Include="ProjectEulerSolutions1To10.cs" />
+    <Compile Include="ProjectEulerSolutions11To20.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

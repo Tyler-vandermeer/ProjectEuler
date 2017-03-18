@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjectEuler
 {
-    class ProjectEulerSolutions
+    class ProjectEulerSolutions1To10
     {
         /// <summary>
         /// If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9.The sum of these multiples is 23.
@@ -300,6 +300,39 @@ namespace ProjectEuler
             }
             Console.WriteLine("9 : Special Pythagorean Triplet");
             Console.WriteLine(prod);
+        }
+        /// <summary>
+        /// The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+        /// Find the sum of all the primes below two million.
+        /// </summary>
+        public void SummationOfPrimes()
+        {
+            long sum = 0;
+            int currentNumber = 1999999;
+            while (true)
+            {
+                bool flag = true;
+                for (int i = 3; i * i <= currentNumber; i += 2)
+                {
+                    if (currentNumber % i == 0)
+                    {
+                        flag = false;
+                        break;
+                    }
+                }
+                if (flag)
+                {
+                    sum += currentNumber;
+                }
+                currentNumber -= 2;
+                if(currentNumber == 1)
+                {
+                    sum += 2;
+                    break;
+                }
+            }
+            Console.WriteLine("10 : Summation Of Primes");
+            Console.WriteLine(sum);
         }
     }
 }
